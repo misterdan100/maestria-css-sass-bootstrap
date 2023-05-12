@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap');
+
+/* GENERALES */
+:root {
+    --color-principal: rgb(0, 128, 128);
+    --color-sombra: rgba(0, 128, 128, 0.2);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans';
+    cursor: default; /* para que no cambien las flechas de cursor */
+
+}
+
+/* ESTILOS CONTENEDOR TIMELINE */
+.timeline {
+    position: relative;
+    margin: 50px auto;
+    padding: 40px 0;
+    width: 100%;
+    
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background: #c5c5c5;
+}
+
+/* ELEMENTOS DE LISTA */
+.timeline ul li {
+    list-style: none;
+    position: relative;
+    width: 50%;
+    padding: 20px 40px;
+    transition: all 0.5s;
+}
+
+.timeline ul li:hover {
+    box-shadow: 0 0 20px var(--color-sombra);
+}
+
+.timeline ul li:nth-child(odd) { /* impares */
+    float: left;
+    text-align: right;
+    clear: both; /* para que los elementos no tengan otros elementos en horizontal */
+    border-radius: 20px 0 0 20px;
+}
+
+.timeline ul li:nth-child(even) { /* pares */
+    float: right;
+    text-align: left;
+    clear: both;
+    border-radius: 0 20px 20px 0;
+}
+
+/* CIRCULO INDICADOR */
+.timeline ul li::before {
+    content: "";
+    position: absolute;
+    top: 30px;
+    width: 10px;
+    height: 10px;
+    background: var(--color-principal);
+    border-radius: 50%;
+    box-shadow: 0 0 0 3px var(--color-sombra);
+    transition: all 0.3s;
+}
+
+.timeline ul li:nth-child(odd)::before {
+    right: -6px;
+}
+
+.timeline ul li:nth-child(even)::before {
+    left: -3px;
+}
+
+/* ESTILOS CONTENIDO */
+.content {
+    padding-bottom: 20px;
+
+}
+
+.timeline ul li h3 {
+    font-weight: 600;
+    color: var(--color-principal);
+}
+
+.timeline ul li p {
+    margin: 10px 0;
+}
+
+/* ESTILOS FECHA */
+.time {
+    font-size: 14px;
+    position: absolute;
+    top: 20px;
+    padding: 8px 15px;
+    background: var(--color-principal);
+    color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 0 0 5px var(--color-sombra);
+    transition: all 0.3s;
+
+}
+
+.timeline ul li:nth-child(odd) .time {
+    right: -145px;
+}
+
+.timeline ul li:nth-child(even) .time {
+    left: -145px;
+}
+
+/* EFECTO HOVER */
+.timeline ul li:hover .time{
+    transform: scale(1.2);
+}
+
+.timeline ul li:hover::before {
+    transform: scale(1.7);
+    
+}
+
+
