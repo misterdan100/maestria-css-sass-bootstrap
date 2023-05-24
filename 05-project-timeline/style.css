@@ -2,35 +2,38 @@
 
 /* GENERALES */
 :root {
-    --color-principal: rgb(0, 128, 128);
-    --color-sombra: rgba(0, 128, 128, 0.2);
+    --color-principal: crimson;
+    --color-sombra: rgba(220, 20, 60, 0.2);
 }
 
 * {
-    margin: 0;
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
     font-family: 'Open Sans';
-    cursor: default; /* para que no cambien las flechas de cursor */
-
+    cursor: default;
 }
 
-/* ESTILOS CONTENEDOR TIMELINE */
+body {
+    background: #222;
+}
+
+/* CONTENDOR DE TIMELINE */
 .timeline {
     position: relative;
     margin: 50px auto;
     padding: 40px 0;
     width: 100%;
-    
 }
 
 .timeline::before {
-    content: "";
+    content: '';
     position: absolute;
     left: 50%;
     width: 2px;
     height: 100%;
     background: #c5c5c5;
+    box-shadow: 0 0 5px white;
 }
 
 /* ELEMENTOS DE LISTA */
@@ -39,28 +42,21 @@
     position: relative;
     width: 50%;
     padding: 20px 40px;
-    transition: all 0.5s;
 }
 
-.timeline ul li:hover {
-    box-shadow: 0 0 20px var(--color-sombra);
-}
-
-.timeline ul li:nth-child(odd) { /* impares */
+.timeline ul li:nth-child(odd) {
     float: left;
     text-align: right;
-    clear: both; /* para que los elementos no tengan otros elementos en horizontal */
-    border-radius: 20px 0 0 20px;
+    clear: both;
 }
 
-.timeline ul li:nth-child(even) { /* pares */
+.timeline ul li:nth-child(even) {
     float: right;
     text-align: left;
     clear: both;
-    border-radius: 0 20px 20px 0;
 }
 
-/* CIRCULO INDICADOR */
+/* CIRCULOS INDICADOR */
 .timeline ul li::before {
     content: "";
     position: absolute;
@@ -78,10 +74,14 @@
 }
 
 .timeline ul li:nth-child(even)::before {
-    left: -3px;
+    left: -4px;
 }
 
-/* ESTILOS CONTENIDO */
+.timeline ul li:hover::before {
+    transform: scale(1.5);
+}
+
+/* CONTENIDO */
 .content {
     padding-bottom: 20px;
 
@@ -90,13 +90,15 @@
 .timeline ul li h3 {
     font-weight: 600;
     color: var(--color-principal);
+
 }
 
 .timeline ul li p {
-    margin: 10px 0;
+    margin: 10px 0 0 ;
+    color: #c5c5c5;
 }
 
-/* ESTILOS FECHA */
+/* FECHA */
 .time {
     font-size: 14px;
     position: absolute;
@@ -105,9 +107,8 @@
     background: var(--color-principal);
     color: #fff;
     border-radius: 20px;
-    box-shadow: 0 0 0 5px var(--color-sombra);
-    transition: all 0.3s;
-
+    box-shadow: 0 0 0 3px var(--color-sombra);
+    transition:all 0.3s;
 }
 
 .timeline ul li:nth-child(odd) .time {
@@ -118,14 +119,18 @@
     left: -145px;
 }
 
-/* EFECTO HOVER */
-.timeline ul li:hover .time{
+.timeline ul li:hover .time {
     transform: scale(1.2);
 }
 
-.timeline ul li:hover::before {
-    transform: scale(1.7);
-    
-}
+
+
+
+
+
+
+
+
+
 
 
