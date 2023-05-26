@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/fontawesome/css/all.css">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #e0f7fa;
+        }
+
+        /* CONTENEDOR DE CARDS */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+
+
+        /* CARDS */
+        .card {
+            width: 300px;
+            height: 500px;
+            position: relative;
+            margin: 20px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            cursor: pointer;
+        }
+
+        .img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        /* CONTENIDO */
+        .content {
+            position: absolute;
+            bottom: -160px;
+            width: 100%;
+            height: 160px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            backdrop-filter: blur(15px);
+            transition: all 0.5s;
+            overflow: hidden;
+        }
+
+        .card:hover .content {
+            bottom: 0;
+        }
+
+
+        /* TEXTOS */
+        .content .text {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .text h3, .text span {
+            color: #fff;
+            text-transform: upppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+            font-size: 22px;
+            text-align: center;
+            transform: translateY(10px);
+            opacity: 0;
+            transition: all 0.3s;
+        }
+
+        .card:hover .text h3,
+        .card:hover .text span {
+            opacity: 1;
+        }
+
+        .text span {
+            font-size: 12px;
+        }
+
+        /* SOCIALES */
+        .sociales {
+            width: 60%;
+            margin: 20px 0;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .sociales a {
+            font-size: 20px;
+            color: #fff;
+            transform: translateY(40px);
+            opacity: 0;
+            transition: all 0.3s;
+        }
+
+        .card:hover .sociales a {
+            transform: translateY(10px);
+            opacity: 1;
+        }
+
+        .card:hover .sociales a:nth-child(2) {
+            transition-delay: .2s;
+        }
+
+        .card:hover .sociales a:nth-child(3) {
+            transition-delay: .4s;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+                
+        <div class="card">
+            <div class="img">
+                <img src="https://source.unsplash.com/mEZ3PoFGs_k" alt="">
+            </div>
+
+            <div class="content">
+                <div class="text">
+                    <h3>Maria Restrepo</h3>
+                    <span>Frontend web development</span>
+                </div>
+
+                <div class="sociales">
+                    <a href=""><span class="fab fa-facebook-f"></span></a>
+                    <a href=""><span class="fab fa-twitter"></span></a>
+                    <a href=""><span class="fab fa-instagram"></span></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="img">
+                <img src="https://source.unsplash.com/X2YO8KFxgEM" alt="">
+            </div>
+
+            <div class="content">
+                <div class="text">
+                    <h3>Luis Mateus</h3>
+                    <span>Frontend web development</span>
+                </div>
+
+                <div class="sociales">
+                    <a href=""><span class="fab fa-facebook-f"></span></a>
+                    <a href=""><span class="fab fa-twitter"></span></a>
+                    <a href=""><span class="fab fa-instagram"></span></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="img">
+                <img src="https://source.unsplash.com/6W4F62sN_yI" alt="">
+            </div>
+
+            <div class="content">
+                <div class="text">
+                    <h3>Pilar Sousa</h3>
+                    <span>Frontend web development</span>
+                </div>
+
+                <div class="sociales">
+                    <a href=""><span class="fab fa-facebook-f"></span></a>
+                    <a href=""><span class="fab fa-twitter"></span></a>
+                    <a href=""><span class="fab fa-instagram"></span></a>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</body>
+</html>
