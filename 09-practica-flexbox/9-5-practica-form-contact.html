@@ -27,9 +27,10 @@
             position: absolute;
             left: 0;
             top: 0;
-            width: 50%;
+            width: 100%;
             height: 100%;
             background: #03a9f4;
+            clip-path: polygon(0 0, 66% 0, 30% 100%, 0% 100%);
         }
 
         .container {
@@ -38,7 +39,7 @@
             width: 1100px;
             height: 550px;
             display: flex;
-            background: #fff;
+            background: transparent;
         }
 
         h2 {
@@ -122,6 +123,113 @@
             transform: scale(1.2);
         }
 
+        /* FORMULARIO */
+        .form {
+            position: absolute;
+            width: calc(100% - 200px);
+            height: 100%;
+            background: #fff;
+            margin-left: 150px;
+            border-radius: 32px;
+            padding: 70px 50px 70px 250px;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+
+        .form h2 {
+            color: #0f3959;
+        }
+
+        .form-box {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding-top: 30px;
+
+        }
+
+        .input-box {
+            position: relative;
+            margin-bottom: 35px;
+        }
+
+        .input-box.w50 {
+            width: 48%;
+        }
+        
+        .input-box.w100 {
+            width: 100%;
+        }
+
+        .input-box input,
+        .input-box textarea {
+            width: 100%;
+            padding: 5px 0;
+            font-size: 18px;
+            color: #333;
+            border: none;
+            border-bottom: 1px solid #777;
+            outline: none;
+            resize: none;
+        }
+
+        .input-box textarea {
+            min-height: 120px;
+        }
+
+        .input-box span {
+            position: absolute;
+            left: 0;
+            padding: 5px 0;
+            font-size: 16px;
+            letter-spacing: 1px;
+            color: #888;
+            transition: all 0.3s;
+            pointer-events: none;/* para que no se pueda seleccionar ni darle click */
+        }
+
+        .input-box input:focus ~ span,
+        .input-box textarea:focus ~ span,
+        .input-box input:valid ~ span,
+        .input-box textarea:valid ~ span{
+            transform: translateY(-20px);
+            font-size: 14px;
+            font-weight: 400;
+            letter-spacing: 1px;
+            color: #03a9f4;
+
+        }
+
+        .input-box input:focus {
+            background: rgba(0, 0, 0, 0.02);
+            border-radius: 6px;
+        }
+
+        /* BOTON */
+        .input-box.btn {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .input-box input[type="submit"] {
+            cursor: pointer;
+            background: #0f3959;
+            text-transform: uppercase;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            color: #fff;
+            border: none;
+            width: 30%;
+            padding: 12px;
+            border-radius: 12px;
+            transition: all 0.3s;
+        }
+
+        .input-box input[type="submit"]:hover {
+            background: #03a9f4;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
     </style>
 </head>
 <body>
@@ -160,9 +268,46 @@
 
             </div>
 
+            <!-- FORMULARIO -->
+            <div class="form">
+                <h2>Comunicate con nosotros</h2>
+            
+                <div class="form-box">
+                    <div class="input-box w50">
+                        <input type="text" required>
+                        <span>Nombre</span>
+                    </div>
+            
+                    <div class="input-box w50">
+                        <input type="text" required>
+                        <span>Apellido</span>
+                    </div>
+            
+                    <div class="input-box w50">
+                        <input type="text" required>
+                        <span>Email</span>
+                    </div>
+            
+                    <div class="input-box w50">
+                        <input type="text" required>
+                        <span>Telefono</span>
+                    </div>
+            
+                    <div class="input-box w100">
+                        <textarea required></textarea>
+                        <span>Escribe tu mensaje...</span>
+                    </div>
+            
+                    <div class="input-box w100 btn">
+                        <input type="submit" value="Enviar">
+                    </div>
+            
+            
+            
+                </div>
+            </div>
+
         </div>
-
-
     </section>
 
 
