@@ -18,9 +18,91 @@
             background: #222;
         }
 
+        a, button {
+            color: #edf0f1;
+            font-size: 0.9em;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 5%;
+        }
+
+        nav img {
+            width: 150px;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        nav img:hover {
+            transform: scale(1.2);
+        }
+
+        nav .enlaces a {
+            text-decoration: none;
+            position: relative;
+            padding: 0 20px;
+            transition: all 0.3s;
+        }
+
+        nav .enlaces a:hover {
+            color: #faaf38;
+        }
+
+        nav .enlaces a::before {
+            content: '';
+            width: 0;
+            height: 2px;
+            background: #faaf38;
+            position: absolute;
+            bottom: -5px;
+            transition: all 0.3s;
+            box-shadow: 0 0 5px #faaf38;
+        }
+        
+        nav .enlaces a:hover::before {
+            width: calc(100% - 40px);
+        }
+        
+        
+        
+        nav button {
+            /* estilos de forma */
+            padding: 10px 25px;
+            background: #faaf38;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        nav button:hover {
+            background: #c98520;
+            box-shadow: 0 0 7px #faaf38;
+
+        }
+
+
+
     </style>
 </head>
 <body>
-    
+    <nav>
+        <img src="/10-practica-menus/img/logo1.png" alt="">
+        
+        <div class="enlaces">
+            <a href="#">Inicio</a>
+            <a href="#">Nosotros</a>
+            <a href="#">Blog</a>
+            <a href="#">Multimedia</a>
+            <a href="#">Contacto</a>
+        </div>
+
+        <button>Ingresar</button>
+    </nav>
 </body>
 </html>

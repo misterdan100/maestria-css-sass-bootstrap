@@ -15,12 +15,119 @@
         }
 
         body {
-            background: #222;
+            background: #fff;
+        }
+
+
+
+        nav {
+            /* forma */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            /* align-items: center; */
+            width: 220px;
+            height: 100vh;
+            /* aparciencia */
+            background: #eee;
+            border: 1px solid #dedede;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+
+        nav img {
+            width: 100%;
+            padding: 20px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        nav img:hover {
+            transform: scale(0.9);
+        }
+
+        nav .enlaces {
+            display: flex;
+            flex-direction: column;
+            height: 80%;
+            padding: 40px 0;
+        }
+
+        nav .enlaces a {
+            text-decoration: none;
+            width: 100%;
+            height: 55px;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            padding: 20px;
+            font-size: 1.2em;
+            color: #584871;
+            transition: all 0.3s;
+        }
+
+        nav .enlaces a:hover {
+            background: #ddd;
+        }
+
+        nav .enlaces a span {
+            width: 45px;
+            color: #4d3d68;
+            transition: all 0.3s;
+        }
+
+        nav .enlaces a:hover span {
+            transform: scale(1.2);
+        }
+
+        /* iconos */
+        nav .sociales {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+
+
+        }
+
+        nav .sociales a {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            border-radius: 50%;
+            background: #ff2753;
+            color: #fff;
+            transition: all 0.3s;
+        }
+
+        nav .sociales a:hover {
+            color: #ff2753;
+            background: transparent;
+            transform: scale(2);
         }
 
     </style>
 </head>
 <body>
-    
+    <nav>
+        <img src="/10-practica-menus/img/logo2.png" alt="">
+
+        <div class="enlaces">
+            <a href="#"><span class="fas fa-home"></span>Inicio</a>
+            <a href="#"><span class="fas fa-blog"></span>Blog</a>
+            <a href="#"><span class="fas fa-users"></span>Nosotros</a>
+            <a href="#"><span class="fas fa-comments"></span>Testimonios</a>
+            <a href="#"><span class="fas fa-envelope"></span>Contacto</a>
+        </div>
+        
+        <div class="sociales">
+            <a href="#"><span class="fab fa-facebook-f"></span></a>
+            <a href="#"><span class="fab fa-twitter"></span></a>
+            <a href="#"><span class="fab fa-instagram"></span></a>
+        </div>
+    </nav>
+
 </body>
 </html>

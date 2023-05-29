@@ -14,13 +14,292 @@
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         }
 
-        body {
-            background: #222;
+        /* body {
+            background: #333;
+        } */
+
+        /* MENU LATERAL */
+        nav {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 60px;
+            height: 100vh;
+            background: #111;
         }
+
+        .contenedor-imagen {
+            width: 100%;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .contenedor-imagen img {
+            width: 100%;
+        }
+
+        /* enlaces */
+        .enlaces {
+            height: 60%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.4);
+            width: 100%;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.5s;
+        }
+
+        .enlaces a:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: #38A6D1;
+        }
+
+        .btn-inferior {
+            position: absolute;
+            bottom: 0;
+        }
+
+        .btn-inferior:hover {
+            background: #dc3545;
+            color: #fff;
+        }
+
+        /* MENU SUPERIOR */
+        header {
+            width: 100%;
+            height: 50px;
+            padding: 0 80px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 5px 5px rgba(0, 0, 0, 0.075);
+            border-bottom: 1px solid #f5f5f5;
+        }
+
+        header p {
+            font-size: 1.2em;
+            font-style: italic;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+
+        header .info-user {
+            display: flex;
+            justify-content: end;
+            align-items: center;
+        }
+
+        header .info-user span {
+            position: relative;
+            width: 35px;
+            height: 35px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 15px;
+            font-size: 1.2em;
+            color: #4b4b4b;
+            cursor: pointer;
+        }
+
+        header .info-user span::after {
+            content: '';
+            position: absolute;
+            right: 8px;
+            top: 4px;
+            background: crimson;
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+        }
+
+        header .info-user .container-imagen {
+            position: relative;
+            cursor: pointer;
+        }
+
+        .container-imagen img {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .container-imagen::after {
+            content: '';
+            position: absolute;
+            right: 0px;
+            bottom: 4px;
+            background: #36e920;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+
+        }
+
+
+        /* ICONOS SOCIALES  */
+        .sociales {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            display: flex;
+            align-items: center;
+        }
+
+        .sociales .icon {
+            margin: 0 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .sociales .icon span {
+            width: 50px;
+            height: 50px;
+            background: #ccc;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 50px;
+            font-size: 20px;
+        }
+
+        .sociales .icon .tooltip {
+            position: absolute;
+            top: 0;
+            background: #ccc;
+            padding: 10px 18px;
+            border-radius: 25px;
+            font-weight: 600;
+            opacity: 0;
+            transition: all 0.3s;
+        }
+        
+        .sociales .icon:hover .tooltip {
+            opacity: 1;
+            top: -60px;
+            pointer-events: none;
+        }
+
+        .sociales .icon .tooltip::before {
+            content: '';
+            position: absolute;
+            bottom: -7px;
+            left: 50%;
+            width: 15px;
+            height: 15px;
+            background: #ccc;
+            transform: translateX(-50%) rotate(45deg);
+            transition: all 0.3s;
+        }
+
+        .sociales .facebook:hover span,
+        .sociales .facebook:hover .tooltip,
+        .sociales .facebook:hover .tooltip::before {
+            background: #3b5999;
+            color: #fff;
+        }
+
+        .sociales .twitter:hover span,
+        .sociales .twitter:hover .tooltip,
+        .sociales .twitter:hover .tooltip::before {
+            background: #46c1f6;
+            color: #fff;
+        }
+
+        .sociales .instagram:hover span,
+        .sociales .instagram:hover .tooltip,
+        .sociales .instagram:hover .tooltip::before {
+            background: #e1306c;
+            color: #fff;
+        }
+
+        .sociales .youtube:hover span,
+        .sociales .youtube:hover .tooltip,
+        .sociales .youtube:hover .tooltip::before {
+            background: #dc3545;
+            color: #fff;
+        }
+        
+
+
+
+
 
     </style>
 </head>
 <body>
+    <!-- MENU LATERAL -->
+    <nav>
+        <div class="contenedor-imagen">
+            <img src="/10-practica-menus/img/logo3.png" alt="">
+        </div>
+
+        <div class="enlaces">
+            <a href="#"><Span class="fas fa-users"></Span></a>
+            <a href="#"><Span class="fas fa-shopping-bag"></Span></a>
+            <a href="#"><Span class="fas fa-file-invoice-dollar"></Span></a>
+            <a href="#"><Span class="fas fa-comments"></Span></a>
+            <a href="#"><Span class="fas fa-file-alt"></Span></a>
+            <a href="#"><Span class="fas fa-cog"></Span></a>
+        </div>
+
+        <a href="#" class="btn-inferior"><span class="fas fa-power-off"></span></a>
+    </nav>
+
+    <!-- MENU SUPERIOR -->
+    <header>
+        <p>Bienvenido</p>
+
+        <div class="info-user">
+            <span class="fas fa-bell"></span>
+            <div class="container-imagen">
+                <img src="/10-practica-menus/img/perfil.jpg" alt="">
+            </div>
+        </div>
+    </header>
+
+
+    <!-- ICONOS SOCIALES -->
+    <div class="sociales">
+        <div class="icon facebook">
+            <div class="tooltip">Facebook</div>
+            <span class="fab fa-facebook-f"></span>
+        </div>
+        
+        <div class="icon twitter">
+            <div class="tooltip">Twitter</div>
+            <span class="fab fa-twitter"></span>
+        </div>
+        
+        <div class="icon instagram">
+            <div class="tooltip">Instagram</div>
+            <span class="fab fa-instagram"></span>
+        </div>
+        
+        
+        <div class="icon youtube">
+            <div class="tooltip">Youtube</div>
+            <span class="fab fa-youtube"></span>
+        </div>
+
+    </div>
     
 </body>
 </html>
