@@ -200,3 +200,147 @@ header .content-header p {
     font-size: 19px;
 }
 
+/* DESTACADOS */
+.destacados {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.destacados::before {
+    content: 'Destacados';
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-size: 12em;
+    color: rgba(0, 0, 0, 0.07);
+}
+
+.game {
+    position: relative;
+    width: 45%;
+    height: 350px;
+    margin: 40px 20px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    transform: all 0.3s;
+    border-radius: 16px;
+}
+
+.game:nth-child(1) {
+    background: linear-gradient(45deg, #10214C, #DA3DBE);
+}
+
+.game:nth-child(2) {
+    background: linear-gradient(45deg, #1A2F3F, #7094CE);
+}
+
+.game:nth-child(3) {
+    background: linear-gradient(45deg, #000, #1C78B2);
+}
+
+.game:nth-child(4) {
+    background: linear-gradient(45deg, #0E2B2F, #00FFFF);
+}
+
+.game img {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%);
+    height: 380px;
+    z-index: 1;
+    transition: all 0.3s;
+}
+
+.game:hover img {
+    left: 75%;
+    height: 400px;
+}
+
+.game .content {
+    position: relative;
+    width: 50%;
+    left: 20%;
+    padding: 20px 20px 20px 40px;
+    color: #fff;
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+.game:hover .content {
+    opacity: 1;
+    left: 0;
+}
+
+.game .content h2 {
+    text-transform: uppercase;
+    font-size: 2.2em;
+    line-height: 1em;
+}
+
+.game .content a {
+    position: relative;
+    color: #000;
+    background: #fff;
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    font-weight: 700;
+    border-radius: 6px;
+}
+
+/* ARTICULOS */
+
+/* TITULO DE ARTICULOS */
+.title {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 70px 0 20px 0;
+}
+
+.title h1 {
+    font-size: 75px;
+    font-weight: 300;
+}
+
+.title::before {
+    content: "Blog";
+    position: absolute;
+    top: -80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-size: 12em;
+    z-index: -1;
+    color: rgba(0, 0, 0, 0.05);
+}
+
+.title .badget-container {
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.title .badget-container .badge {
+    background: transparent;
+    color: var(--gris-default);
+    border: 1px solid var(--gris-default);
+}
+
+.title .badget-container .badge:hover {
+    background: var(--color-principal);
+    color: #fff;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
