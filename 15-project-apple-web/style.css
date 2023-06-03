@@ -70,8 +70,22 @@ section {
     height: 100vh;
 }
 
+.text-container {
+    flex-direction: column;
+}
 
-/* ESTILOS GRID */
+.enlace-info {
+    font-size: 21px;
+    margin-top: 30px;
+    color: var(--color-enlaces);
+}
+
+.enlace-info:hover {
+    text-decoration: underline;
+}
+
+
+/* ESTILOS GRID -------------------------------------------*/
 .grid {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -106,7 +120,7 @@ section {
 }
 
 
-/* MENU NAVEGACION */
+/* MENU NAVEGACION -------------------------------------*/
 nav {
     position: fixed;
     top: 0;
@@ -147,4 +161,103 @@ nav .enlaces a:hover {
 }
 
 
-/* HEADER PRODUCTOS */
+/* HEADER PRODUCTOS ------------------------------------*/
+header {
+    width: 100%;
+    height: calc(100vh - 44px);
+    margin: 44px 0 0 0;
+    background: #f2f2f2;
+}
+
+header img {
+    width: 85%;
+}
+
+header .text-container {
+    padding: 30px 0;
+    justify-content: end !important;
+}
+
+header .img-container {
+    align-items: end;
+}
+
+
+/* SERVICIOS ---------------------------------------- */
+.service {
+    background: url(./img/image2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-size: center;
+    background-attachment: fixed;
+    /* filter: brightness(0.05); */
+}
+
+.service::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+}
+
+.service .grid {
+    width: 85%;
+    margin: 0  auto;
+}
+
+.service .contenedor {
+    flex-direction: column;
+    z-index: 1;
+}
+
+.service img {
+    width: 250px;
+    height: 250px;
+    margin: 25px 0;
+}
+
+.service .text-container {
+    width: 60%;
+    text-align: center;
+}
+
+.service .text-container h2 {
+    color: #fff;
+    font-size: 28px;
+    font-weight: 400;
+}
+
+
+/* PRODUCTOS ---------------------------------------- */
+/* IPAD -------------------------- */
+.ipad {
+    background: #fff;
+}
+
+.ipad img {
+    height: 85%;
+    object-fit: cover;
+    object-position: left;
+}
+
+.ipad .text-container {
+    grid-column: 2 / 4;
+    align-items: center;
+}
+
+/* WHATCH------------------------ */
+.watch {
+    padding: 30px 50px 0 50px;
+}
+
+.watch .text-container img {
+    width: 100px;
+}
+
+/* AIRPODS --------------------- */
+.airpods {
+    height: auto;
+}
