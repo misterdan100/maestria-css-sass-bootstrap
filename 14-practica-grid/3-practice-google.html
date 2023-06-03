@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        .grid-container {
+            height: 100vh;
+            padding: 10px;
+            display: grid;
+            gap: 10px;
+
+            /* creando grid */
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: auto;
+
+            grid-template-areas: "gmail      gmail search drive"
+                                 "translate  maps  search youtube"
+                                 "translate  apps  apps   apps";
+        }
+
+        .item {
+            color: #fff;
+            text-shadow: 0 0 5px rgba(0,0,0,0.5);
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            cursor: default;
+            transition: all 0.2s;
+            opacity: 0.8;
+        }
+
+        .item:hover {
+            opacity: 1;
+        }   
+
+        /* colores de fondo */
+        .item:nth-child(1) {
+            background: #e53935;
+            grid-area: gmail;
+        }
+
+        .item:nth-child(2) {
+            background: #0d47a1;
+            grid-area: search;
+        }
+
+        .item:nth-child(3) {
+            background: #fbc02d;
+            grid-area: drive;
+        }
+
+        .item:nth-child(4) {
+            background: #1e88e5;
+            grid-area: translate;
+        }
+
+        .item:nth-child(5) {
+            background: #43a047;
+            grid-area: maps;
+        }
+
+        .item:nth-child(6) {
+            background: #e53935;
+            grid-area: youtube;
+        }
+
+        .item:nth-child(7) {
+            background: #555;
+            grid-area: apps;
+        }
+
+        .item img {
+            width: 100px;
+            transition: all 0.3s;
+        }
+
+        .item:hover img {
+            transform: scale(1.2);
+            cursor: pointer;
+        }
+
+        .item h3 {
+            margin: 10px 0;
+            font-size: 24px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+
+        .item h1 {
+            font-size: 8em;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="item">
+            <img src="./img/image1.png" alt="">
+            <h3>Gmail</h3>
+        </div>
+        
+        <div class="item">
+            <img src="./img/image2.png" alt="">
+            <h3>Buscador</h3>
+        </div>
+
+        <div class="item">
+            <img src="./img/image3.png" alt="">
+            <h3>Drive</h3>
+        </div>
+
+        <div class="item">
+            <img src="./img/image4.png" alt="">
+            <h3>Translate</h3>
+        </div>
+
+        <div class="item">
+            <img src="./img/image5.png" alt="">
+            <h3>Maps</h3>
+        </div>
+
+        <div class="item">
+            <img src="./img/image6.png" alt="">
+            <h3>Youtube</h3>
+        </div>
+
+        <div class="div item">
+            <h1>Google Apps</h1>
+        </div>
+
+    </div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/fontawesome/css/all.min.css">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: #fff;
+        }
+
+        a {
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        a:hover {
+            color: #4da1fa;
+        }
+
+        body {
+            display: grid;
+            /* justify-content: end; */
+            align-content: end;
+            min-height: 100vh;
+        }
+
+        footer {
+            background: #222;
+            padding: 50px 100px;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 20px;
+        }
+
+        footer h2 {
+            color: #ccc;
+            font-weight: 400;
+            letter-spacing: 1px;
+            margin: 15px 0;
+        }
+
+        .nosotros .sociales {
+            display: grid;
+            grid-template-columns: repeat(5, 50px);
+            /* justify-content: space-between; */
+            gap: 10px;
+        }
+
+        .sociales a {
+            width: 50px;
+            height: 50px;
+            margin-top: 10px;
+            background: #555;
+            color: #fff;
+            font-size: 20px;
+            border-radius: 5px;
+            display: grid;
+            place-items: center;
+            transition: all 0.3s;
+        }
+
+        .sociales a:hover {
+            background: #333;
+        }
+
+        .sociales a span {
+            transition: all 0.3s;
+        }
+
+        .sociales a:hover span {
+            transform: scale(1.2) rotateY(360deg);
+        }
+
+
+        /* ENLACES */
+        li {
+            list-style: none;
+            margin: 10px 0;
+        }
+
+
+        /* CONTACTOS */
+        .contacto div {
+            display: grid;
+            grid-template-columns: 30px 1fr;
+            margin: 15px 0;
+        }
+
+        .contacto div span.fas {
+            padding-top: 5px;
+        }
+
+        /* COPY */
+        .copy {
+            background: #111;
+            height: 50px;
+            display: grid;
+            place-items: center;            
+            font-style: italic;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+    <footer>
+        <div class="nosotros">
+            <h2>Nosotros</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, sed dignissimos! Dolores maxime magnam totam ratione, culpa sequi voluptatem itaque aliquam ipsam optio, ducimus facilis laboriosam, asperiores architecto id iste?</p>
+
+            <div class="sociales">
+                    <a href=""><span class="fab fa-facebook-f"></span></a>
+                    <a href=""><span class="fab fa-twitter"></span></a>
+                    <a href=""><span class="fab fa-instagram"></span></a>
+                    <a href=""><span class="fab fa-youtube"></span></a>
+                    <a href=""><span class="fab fa-linkedin-in"></span></a>
+            </div>
+        </div>
+
+        <div class="enlaces">
+            <h2>Enlaces sugeridos</h2>
+            <ul>
+                <li><a href="">Nosotros</a></li>
+                <li><a href="">FAQ</a></li>
+                <li><a href="">Politicas</a></li>
+                <li><a href="">Ayuda</a></li>
+                <li><a href="">Terminos & Condiciones</a></li>
+                <li><a href="">Contacto</a></li>
+            </ul>
+        </div>
+
+        <div class="enlaces">
+            <h2>Tienda</h2>
+            <ul>
+                <li><a href="">Telefonia</a></li>
+                <li><a href="">Videoconsolas</a></li>
+                <li><a href="">Computadores</a></li>
+                <li><a href="">Audifonos</a></li>
+                <li><a href="">Perifericos</a></li>
+                <li><a href="">Televisores</a></li>
+           </ul>
+        </div>
+
+        <div class="contacto">
+            <h2>Contactanos</h2>
+
+            <div>
+                <span class="fas fa-map-marked"></span>
+                <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. USA</span>
+            </div>
+
+            <div>
+                <span class="fas fa-phone"></span>
+                <p>  
+                     <a href="">+1 123456789</a>
+                     <a href="">+1 987654321</a>
+                </p>
+           </div>
+
+           <div>
+                <span class="fas fa-envelope"></span>
+                <p><a href="">miemail@gmail.com</a></p>
+           </div>
+        </div>
+    </footer>
+
+    <div class="copy">
+        <p>Copyright © 2021. Todos los derechos reservados</p>
+   </div>
+</body>
+</html>
