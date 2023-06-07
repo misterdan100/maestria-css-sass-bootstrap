@@ -11,7 +11,7 @@
 }
 
 
-/* ESTILOS GENERALES */
+/** ESTILOS GENERALES -------------------------------------*/
 * {
     padding: 0;
     margin: 0;
@@ -19,6 +19,27 @@
     font-family: Arial, Helvetica, sans-serif;
     color: var(--gris600);
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    background: transparent;
+    transition: all 0.3s;
+}
+
+::-webkit-scrollbar-thumb:hover ::-webkit-scrollbar{
+    width: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #e8b200;
+    border-radius: 5px;
+}
+
+
 
 a {
     text-decoration: none;
@@ -32,7 +53,38 @@ h3 {
     font-family: var(--font-cursiva);
 }
 
-/* GRID ESTILOS GENERALES DE DISENIO -----------------*/
+
+/*? ESTILO BOTONES ------------------ */
+.btn {
+    background: transparent;
+    width: 130px;
+    height: 42px;
+    font-size: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s;
+    border-radius: 8px;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn.light {
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+.btn.dark {
+    border: 2px solid var(--gris600);
+    color: var(--gris600);
+}
+
+
+
+/*? GRID ESTILOS GENERALES DE DISENIO -----------------*/
 .grid {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -40,7 +92,87 @@ h3 {
     height: 100%;
 }
 
-/* para centrar todo el contenido */
+
+/*? ESTILOS GENERALES DE TEXTO */
+.text-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* display: grid;
+    place-items: center; */
+    z-index: 1;
+}
+
+.text-content.full {
+    grid-column: span 12;
+}
+
+.text-content.full h1,
+.text-content.full h2 {
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.text-content.full h1 {
+    font-size: 115px;
+    letter-spacing: 20px;
+    line-height: 1.5;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: all 0.3s;
+}
+
+.text-content.full h1:hover {
+    transform: scale(.95);
+}
+
+.text-content.full h2 {
+    font-size: 50px;
+    letter-spacing: 2px;
+    font-weight: 100;
+    line-height: 0.1;
+}
+
+
+/*? TEXT CONTENT LATERAL ------------------------------ */
+.background {
+    background-position: right !important;
+    background-size: cover !important;
+}
+
+
+.text-content.lateral {
+    padding: 0 50px;
+}
+
+.text-content.lateral h1 {
+    font-size: 55px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    line-height: 1;
+    text-align: center;
+}
+
+.text-content.lateral h3 {
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.text-content.lateral p {
+    font-size: 20px;
+    margin: 20px 0;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+
+
+/*? para centrar todo el contenido ----------------*/
 .container-center {
     width: 85%;
     margin: 0 auto;
@@ -55,7 +187,7 @@ h3 {
 }
 
 
-/* SECCIONES ------------------------------------- */
+/*? GENERALES SECCIONES ------------------------------------- */
 section {
     position: relative;
     height: 100vh;
@@ -63,15 +195,28 @@ section {
 }
 
 
-/* MENU DE NAVEGACION PPAL ------------------------- */
+section.full::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-attachment: fixed !important;
+    background-position: center !important;
+}
+
+
+/** MENU DE NAVEGACION PPAL --------------------------------- */
 nav {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 50px;
-    background: rgba(249, 219, 121, 0.745);
+    background: rgba(249, 219, 121, 0.5);
     z-index: 3; /* para que siempre este por encima */
+    backdrop-filter: blur(10px);
 }
 
 nav .grid {
@@ -130,7 +275,7 @@ nav .enlaces a:hover {
 header {
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: calc(100vh + 50px);
     background: #f9db79;
 }
 
@@ -156,27 +301,76 @@ header .text-content {
     padding: 200px 0;
 }
 
-.text-content {
-    position: relative;
-    width: 100%;
-    height: 100%;
+.text-content.full h3 {
+    position: absolute;
+    bottom: 50px;
+    right: 0px;
+    font-size: 50px;
+    font-weight: 700;
+    color: #000;
+}
+
+
+/* SECCION SABORES */
+.sabores {
+    height: 100vh;
+}
+
+.sabores div.background {
+    background: url(./img/image2.webp);
+}
+
+
+
+/** SECTION ESPECIAL */
+.especial {
+    background: #b5e8d5;
+}
+
+.especial::before {
+    background: url(./img/image3.webp);
+    z-index: 1;
+}
+
+
+/** LUGAR */
+.lugar .background {
+    background: url(./img/image4.webp);
+}
+
+
+/** EVENTOS */
+.eventos {
+    background: #ffbfb3;
+
+}
+
+.eventos::before {
+    background: url(./img/image5.webp);
+}
+
+
+.eventos .btn {
+    width: 200px;
+}
+
+
+/** POSTRES ----------------------*/
+.postres .background {
+    background: url(./img/image6.webp);
+}
+
+
+/** SECCION HELADOS  */
+.helado {
+    height: 115vh;
+    background: url(./img/image7.webp), #b5e8d5;
+    background-attachment: fixed;
+    background-size: cover;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
 }
 
-/* estilos de texto */
-.text-content.full h1,
-.text-content.full h2 {
-    color: #fff;
-    text-transform: uppercase;
-    text-align: center;
-}
-
-.text-content.full h1 {
-    font-size: 115px;
-    letter-spacing: 20px;
-    line-height: 1.5px;
-    font-family: Arial, Helvetica, sans-serif;
+.helado img {
+    width: 100%;
+    object-fit: cover;
 }
