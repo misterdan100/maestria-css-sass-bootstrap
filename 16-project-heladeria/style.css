@@ -35,7 +35,7 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #e8b200;
+    background: #f7ca37;
     border-radius: 5px;
 }
 
@@ -373,4 +373,73 @@ header .text-content {
 .helado img {
     width: 100%;
     object-fit: cover;
+}
+
+
+/** FOOTER --------------------------------------------- */
+footer {
+    width: 100%;
+    height: 400px;
+}
+
+footer .grid {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    justify-items: center;
+    align-content: center;
+}
+
+footer h2 {
+    font-size: 28px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+footer p,
+footer ul,
+footer input {
+    margin: 10px 0;
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer ul li a:hover {
+    text-decoration: underline;
+}
+
+footer input {
+    width: 100%;
+    height: 40px;
+    padding: 0 20px;
+}
+
+footer input::placeholder {
+    letter-spacing: 1px;
+    color: var(--gris600);
+}
+
+footer .btn {
+    width: 100%;
+}
+
+footer .sociales {
+    justify-content: start;
+}
+
+
+/** DERECHOS RESERVADOS */
+.copy {
+    display: grid;
+    place-content: center;
+    width: 100%;
+    height: 35px;
+    background: #000;
+}
+
+.copy p {
+    color: rgba(255, 255, 255, 0.5);
+    font-style: italic;
+    font-size: 14px;
 }
