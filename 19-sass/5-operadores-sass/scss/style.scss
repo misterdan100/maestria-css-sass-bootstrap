@@ -1,0 +1,18 @@
+.container {
+    width: 600px;
+    margin: 0 auto;
+
+    section {
+        float: left;
+        width: 200px + 200px;
+        height: 100vh - 20vh;
+        background: #222;
+    }
+
+    aside {
+        float: left;
+        width: 100% / 3;
+        height: 400px;
+        background: orangered;
+    }
+}

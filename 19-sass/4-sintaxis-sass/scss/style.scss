@@ -1,0 +1,65 @@
+// VARIABLES
+
+$colorFondo: #ccc;
+$colorPrincipal: crimson;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    background: $colorFondo;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.articulo {
+    width: 500px;
+    height: 500px;
+    background: #fff;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 2px solid $colorPrincipal;
+    transition: all 0.3s;
+
+    .titulo {
+        color: $colorPrincipal;
+        font: {
+            size: 35px;
+            weight: 500;
+            style: italic;
+        }
+
+        text: {
+            align: center;
+            transform: uppercase;
+            shadow: 0 0 5px rgba(#000000, 0.5);
+        }
+
+        &:hover {
+            color: #122345;
+        }
+    }
+
+    p {
+        line-height: 20px;
+        font-size: 18px;
+        text-align: justify;
+        margin: 10px 0;
+    }
+
+    &:hover {
+        background: $colorPrincipal;
+        color: #fff;
+        box-shadow: 0 0 15px 5px rgba($colorPrincipal, 0.5);
+    }
+}
+

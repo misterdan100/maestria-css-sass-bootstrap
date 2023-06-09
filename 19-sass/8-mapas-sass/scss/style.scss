@@ -1,0 +1,33 @@
+$titulos: (
+    h1: 40px,
+    h2: 30px,
+    h3: 20px,
+    h4: 15px,
+    h5: 10px,
+    h6: 9px
+);
+
+$colores: (
+    azul: blue,
+    rojo: red,
+    verde: green
+);
+
+
+// acceder a mapas
+h1 {
+    font-size: map-get($titulos, h1);
+    color: map-get($map: $colores, $key: rojo);
+}
+
+
+// mezclar elementos
+$tituloColores: map-merge($titulos, $colores);
+
+h1 {
+    font-size: map-get($map: $tituloColores, $key: h2);
+    color: map-get($map: $tituloColores, $key: azul);
+}
+
+$nuevoTitulo: map-remove($titulos, h1);
+

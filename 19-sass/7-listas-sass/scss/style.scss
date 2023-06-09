@@ -1,0 +1,21 @@
+$colores: blue, red, green, yellow, orange, pink;
+$colores2: indigo, black, white;
+
+
+h1 {
+    color: nth($colores, 3);
+}
+
+
+// COMBINAR LISTAS
+$coloresTotales: join($colores, $colores2, comma);
+
+h1 {
+    color: nth($coloresTotales, 7);
+}
+
+$agregarElemento: append($colores, black, comma);
+
+h1 {
+    color: nth($agregarElemento, 7);
+}
