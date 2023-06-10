@@ -1,0 +1,13 @@
+.box{
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    border: 1px solid #ccc;
+}
+
+@for $i from 1 through 20{
+    .box:nth-child(#{$i}){
+         background: #00061A * $i;
+    }
+
+}
