@@ -1,0 +1,74 @@
+// MEDIA QUERY
+$desktop: #{'(max-width: 1100px)'};
+$tablets: #{'(max-width: 790px)'};
+$phone: #{'(max-width: 550px)'};
+
+@mixin desktop {
+     @media screen and #{$desktop} { 
+          @content;
+     }
+}
+
+@mixin tablets {
+     @media screen and #{$tablets} { 
+          @content;
+     }
+}
+
+@mixin phone {
+     @media screen and #{$phone} { 
+          @content;
+     }
+}
+
+
+
+// DESKTO
+@include desktop(){
+     // ABOUT
+     .about{
+          &__container{
+               .content{
+                    order: 1;
+                    flex: 0 0 100% !important;
+                    margin: 50px 0;
+               }
+
+               .container_image{
+                    order: 0;
+                    flex: 0 0 100% !important;
+                    margin: 50px 0;
+               }
+          }
+     }
+
+     //ICONS
+     .icons {
+        width: 100% !important;
+     }
+}
+
+
+//* TABLETS
+@include tablets() {
+    // CARDS
+    .card {
+        width: 45% !important;
+    }
+
+}
+
+//* PHONES
+@include phone() {
+    // CARDS
+    .card {
+        width: 100% !important;
+    }
+
+    // FOOTER
+    .footer {
+        &__container {
+            grid-template-columns: 1fr !important;
+        }
+    }
+}

@@ -1,0 +1,35 @@
+html {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: $color-primario;
+    border-radius: 5px;
+}
+
+.scroll-up {
+    width: 45px;
+    height: 45px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: $color-primario;
+    border-radius: 50%;
+    @include dflex(center, center, row nowrap);
+    transition: all 0.5s;
+    
+    a {
+        color: #fff;
+        font-size: 25px;
+        @include dflex(center, center, row nowrap);
+    }
+
+    &:active {
+        transform: scale(5);
+        opacity: 0;
+    }
+}
