@@ -1,0 +1,20 @@
+//* VARIABLES OVERRIDE
+// para sobreescribir las variables principales, poner primero que el import
+//! nunca editar la libreria de bootstrap
+$primary: #ba4ef8;
+$success: #00ffdd;
+$danger: #5e0000;
+$warning: #da5000;
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+
+
+//* ESTILOS AGREGADOS POR MI
+.midiv{
+    width: 200px;
+    height: 200px;
+    background: lightblue;
+    padding: 40px;
+    overflow: auto;
+}
